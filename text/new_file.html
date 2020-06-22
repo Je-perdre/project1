@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<ul><!-- 此处li是使用v-for和@click实现 遍历3个li-->
+				<li>此处显示json对象中arr数组的水果名称</li>
+				<li>此处显示json对象中arr数组的水果名称</li>
+				<li>此处显示json对象中arr数组的水果名称</li>
+				<!-- i的值不是固定的，相当于jq中的索引值 -->
+			</ul>
+			<p>此处是当点击上面每一个li后显示上述li对应的索引值</p>
+		</div>
+
+		<script>
+			new Vue({
+				el:'#box',
+				data:{
+					json:{
+						des:'描述性内容',
+						type:'数据',
+						arr:['apple','bananna','pear'],
+						title:['新闻'],
+						con:['']						
+					},
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<!-- Step1.对于vue,可以用cdn -->
+		<script src="./js/vue.js"></script>
+		<style>
+			#app div{
+            padding: 2%;
+            margin-bottom: 1%;
+            border-bottom: 1px solid #ddd;
+            background-color: blanchedalmond;
+        }
+    </style>
+	</head>
+
+	<body>
+
+
+		<div id="app">
+
+
+			<!-- 对象遍历 -->
+			<div v-for="(value, key, index) in object">
+				{{ index }}. {{ key }} - {{ value }}
+			</div>
+
+			<!-- 数组对象遍历 -->
+			<div v-for="(value, key, index) in objectArray">
+				姓名：{{value.name}}
+				年龄:{{value.age}}
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+					// 对象
+					object: {
+						name: '张三',
+						names: '李四'
+					},
+
+					// 数组对象
+					objectArray: [{
+							name: '张三',
+							age: 14
+						},
+						{
+							name: '李四',
+							age: 18
+						}
+					]
+				}
+			})
+		</script>
+	</body>
+
+</html>
